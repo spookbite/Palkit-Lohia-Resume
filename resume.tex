@@ -3,11 +3,215 @@
 % LaTeX Template
 % Version 1.2 (16/9/2014)
 %
-% Original author:
-% Debarghya Das (http://debarghyadas.com)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
 %
-% Original repository:
-% https://github.com/deedydas/Deedy-Resume
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{deedy-resume-openfont}
+\documentclass[10pt]{report}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\fontspec{[fontawesome-webfont.ttf]}
+\usepackage{fontawesome}
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{}{Palkit Lohia}{
+Sophomore @ Economics, IIT Kharagpur}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{IIT Kharagpur}
+\descript{Integrated B.Sc + M.Sc IN ECONOMICS \\ CGPA: 8.87/10}
+\location{2019-2024| West Bengal, India}
+\sectionsep
+\\~\\~\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{INTEREST AREAS}
+I’m intrigued by the idea of computers working like a human brain and \\ performing operations which would otherwise be laborious and near to impossible. \\~\\
+I’m mainly interested in solving real \\ world problems with the help of Artificial Intelligence.
+\sectionsep
+\\~\\~\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+\emph{T - Theory | L - Laboratory}\\
+\descript{Completed}
+Programming \& Data Structures (T/L)\\
+\descript{Ongoing}
+Game Theory (T)\\
+Statistics for Economics (T)\\
+\sectionsep
+\descript{MOOCs}\\
+\href{https://coursera.org/share/9a2868c911ab931492ad1bfc84b3ac75}{Natural Language Processing with Classification and Vector Spaces}\\
+\href{https://coursera.org/share/b77c1d962643f8fa066ca076c3f3be10}{Natural Language Processing with Probabilistic Models}\\
+\href{https://coursera.org/share/85611fef8e8312607c95a49a5a63fc87}{Discrete Math and Analyzing Social Graphs}\\
+\href{https://coursera.org/share/b76987bf1b6c78e3745c91ced9492502}{Linear Algebra for Machine Learning}
+\href{https://coursera.org/share/7446c90cce3eeb7deb317fd868c0fa4f}{Introduction to portfolio\\ construction and analysis with python}\\
+
+
+\\~\\~\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     CONTACT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{CONTACT \& LINKS} 
+\faPhone{+91-76799 52548}\\
+\faEnvelope\ {\href{mailto:palkitlohia15@iitkgp.ac.in}{ palkitlohia15@iitkgp.ac.in}}\\
+\faGithub\ {\href{https://github.com/spookbite}{ spookbite}}\\
+\faGlobe\ {\href{https://spookbite.github.io/}{ spookbite.github.io}}\\
+\faLinkedinSquare\ {\href{https://www.linkedin.com/in/palkit-l-49aa66195/}{ Palkit Lohia}}\\
+\faMap{ LBS Hall,  IIT Kharagpur - 721302 }\\
+\sectionsep
+ \\~\\
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{\href{https://github.com/SPOOKBITE/NLP_PROJECTS}{PROJECTS}}
+
+\runsubsection{\href{https://github.com/SPOOKBITE/NLP_PROJECTS}{}}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Implemented a system to assign a part-of-speech tag (Noun, Verb, Adjective...) to each word in an input text.
+\item DocumentSearch: Implemented approximate K-NN using LSH, to
+search for documents that are similar to a given document.
+\item AutoCorrect: Implemented an Auto-correct system using Leven-
+shtein distance.
+\item AutoComplete: Implemented an Auto-complete system using the N-
+gram Language Model.
+\item Implemented a system to predict the countries given its capital city.
+\item Sentiment Analysis of tweets using Logistic Regression and Naive Bayes theorem.
+\end{tightemize}
+
+
+\\~\\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Technical Skills}
+\begin{tabular}{r|p{15cm}}
+\textsc{Programming Languages} & \textbf{ C | C++ | Python } \\
+\textsc{Databases} & \textbf{ MySQL }\\
+\textsc{Artificial Intelligence} & \textbf{Pandas, Numpy, Matplotlib, Scikit-learn, NLTK}\\ 
+\end{tabular}
+
+\\~\\
+%----------------------------------------------------------------------------------------
+%	Scholastic Achievements
+%----------------------------------------------------------------------------------------
+
+\section{SCHOLASTIC ACHIEVEMENTS}
+
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+
+\item{JEE Advanced \emph{AIR 5492}:} Among the top 3\% of the 1.2 million applicants in JEE Mains 2019.
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\item{JEE Mains \emph{AIR 3230}:} Among the top 0.28\% of the 1.2 million applicants in JEE Mains 2019. 
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\item Recipient of the Merit-Cum-Means scholarship offered by IIT Kharagpur to meritorius students pursuing university education.
+\end{tightemize}
+
+\\~\\
+
+%	Activities and Leadership
+%----------------------------------------------------------------------------------------
+
+\section{Activities \& Leadership}
+
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+
+
+\item {\emph{Core Team Member, Kharagpur Open Source Society}:} Responsible for the smooth conduct of events to familiarize students with open source technologies and philosophy.
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\item{\emph{Student Member, International Relations Cell, IIT Kharagpur}}Part of a 15 member team that works to promote the exchange of students faculty and ideas between IIT Kharagpur and her international partners. The Office has a dedicated team of Executives working on all aspects of international engagement and is jointly headed by the Dean and Associate Dean of International Relations. \vspace{\topsep} % Hacky fix for awkward extra vertical space
+\item {\emph{Growth Team Member, IIT Tech Ambit}:} Part of a 10-member team that is responsible for it’s Growth and Expansion. IIT Technology Ambit is a tech magazine that covers innovation in tech across the IIT ecosystem, funded by the Dean, SRIC, IIT Kharagpur.
+
+\end{tightemize}
+\sectionsep
+
+\end{minipage} 
+\end{document}
+
 %
 % IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
 %
